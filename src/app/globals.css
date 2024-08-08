@@ -3,13 +3,25 @@
 @tailwind utilities;
 
 * {
-margin: 0;
-padding: 0;
 box-sizing: border-box;
 }
-html, body{ 
-max-width: 100svw;
+
+@layer base{
+    *{
+        @apply m-0 p-0 
+    }
+    html,body{
+        @apply max-w-[100svw]
+    }
+    header{
+        @apply w-[100%]
+    }
 }
-header{
-    width: 100%;
+
+@layer utilities {
+      /* For removing scrollbar */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        
+        }
 }
