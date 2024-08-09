@@ -14,6 +14,7 @@ const Navbar = () => {
           <ul className="flex items-center gap-5">
             <li><Link href="/">Courses</Link></li>
             <li><Link href="/">Tutorials</Link></li>
+            <li><Link href="/problems">Problems</Link></li>
             <li><Link href="/">Certifications</Link></li>
           </ul>
           <div className="rounded-3xl flex w-[40%] h-[60%] items-center border-2 p-2">
