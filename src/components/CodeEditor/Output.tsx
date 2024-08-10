@@ -32,7 +32,7 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
     <div className="w-full">
       <p className="mb-2 text-lg font-semibold">Output</p>
       <button
-        className={`bg-green-500 text-white px-4 py-2 rounded-md shadow-md ${
+        className={`bg-green-500 text-white sm:text-xl text-sm px-2 sm:px-4 py-2 rounded-md shadow-md ${
           isLoading ? "opacity-50 cursor-not-allowed" : "hover:bg-green-600"
         }`}
         onClick={runCode}

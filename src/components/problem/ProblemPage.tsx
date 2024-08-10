@@ -25,16 +25,16 @@ const ProblemDetail: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen  bg-gray-100 flex flex-col items-center p-8">
-      <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-6">
-        <h1 className="text-3xl font-bold text-blue-600 mb-4">
+    <div className="min-h-screen   bg-gray-100 flex flex-col items-center p-8">
+      <div className="w-full max-w-5xl bg-white shadow-lg rounded-lg p-6">
+        <h1 className="lg:text-3xl text-2xl font-bold text-blue-600 mb-4">
           {problem.title}
         </h1>
         <p className="text-gray-700 mb-4">{problem.description}</p>
 
         <div className="flex flex-col p-4 shadow-inner bg-gray-50/50 rounded-md mb-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-xl font-semibold text-blue-500">Hint</h3>
+            <h3 className="text-xl font-semibold text-yellow-500">Hint</h3>
             <button
               onClick={() => setShowHint(!showHint)}
               className="flex items-center gap-2 focus:outline-none"
@@ -53,7 +53,7 @@ const ProblemDetail: React.FC = () => {
         </div>
 
         <div className="flex items-center justify-between  mb-4">
-          <h3 className="text-xl font-semibold text-blue-500">Code Compiler</h3>
+          <h3 className="text-xl font-bold text-gray-700 ">Code Compiler</h3>
           <button
             onClick={() => setShowBlack(!showBlack)}
             className="flex items-center gap-2 focus:outline-none"
@@ -71,18 +71,18 @@ const ProblemDetail: React.FC = () => {
         </div>
 
         {showBlack ? (
-          <div className="bg-black text-gray-500 p-4 rounded-lg">
+          <div className="bg-black text-gray-500 md:p-4 rounded-lg">
             <CodeEditor />
           </div>
         ) : (
-          <div className="bg-gray-50/70 text-gray-500 p-4 rounded-lg shadow-inner">
+          <div className="bg-gray-50/50 text-gray-500 md:p-4 rounded-lg shadow-inner">
             <CodeEditor />
           </div>
         )}
 
         <div className="flex flex-col p-4 shadow-inner mt-8 bg-gray-50/50 rounded-md mb-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-xl font-semibold text-blue-500">Solution</h3>
+            <h3 className="text-xl font-semibold text-green-500">Solution</h3>
             <button
               onClick={() => setShowSolution(!showSolution)}
               className="flex items-center gap-2 focus:outline-none"

@@ -35,7 +35,7 @@ const CodeEditor: React.FC = () => {
               enabled: false,
             },
           }}
-          height="20vh"
+          height="30vh"
           theme="vs-dark"
           
           language={language}
