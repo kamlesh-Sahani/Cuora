@@ -33,15 +33,15 @@ const Navbar = () => {
       {/* right */}
       <div className=" w-[50%] flex justify-end items-center gap-10 max-sm:gap-5 h-full font-semibold text-white ">
         <BsFillMoonStarsFill style={{ color: "#111827", width: 24, height: 24, cursor: 'pointer' }} />
-        <div className="flex gap-2 items-center w-[50%] h-[70%] max-md:hidden">
-          <Link href="" className="rounded-3xl bg-[#146EF5] hover:bg-[#0d5fd8] px-2 text-[1rem] h-full max-lg:w-[45%] w-[30%] flex justify-center duration-200 items-center text-center max-md:text-[0.9rem]">
+        <div className="flex gap-3 items-center justify-end w-[30%] max-lg:w-[50%] h-[70%] max-md:hidden">
+          <Link href="" className="rounded-3xl bg-[#146EF5] hover:bg-[#0d5fd8] px-2 text-[1rem] h-full max-lg:w-[55%] w-[55%] flex justify-center duration-200 items-center text-center max-md:text-[0.9rem]">
             Sign Up
           </Link>
-          <Link href="" className="text-gray-900 rounded-3xl hover:bg-[#F3F4F6] border px-2 text-[1rem] h-full max-lg:w-[40%] w-[30%] flex justify-center items-center duration-200 text-center max-md:text-[0.9rem]">
+          <Link href="" className="text-gray-900 rounded-3xl hover:bg-[#F3F4F6] border px-2 text-[1rem] h-full max-lg:w-[45%] w-[45%] flex justify-center items-center duration-200 text-center max-md:text-[0.9rem]">
             Login
           </Link>
         </div>
-        <Link href="" className="hidden rounded-3xl bg-[#146EF5] hover:bg-[#FACC15] px-[3px] text-[1rem] max-md:w-[50%] max-lg:w-[30%] h-[70%] max-sm:h-[65%] max-md:flex justify-center duration-200 items-center text-center max-md:text-[0.9rem]">
+        <Link href="" className="hidden rounded-3xl bg-[#146EF5] hover:bg-[#FACC15] px-[3px] text-[1rem] max-sm:w-[50%] max-lg:w-[30%] h-[70%] max-sm:h-[65%] max-md:flex justify-center duration-200 items-center text-center max-md:text-[0.9rem]">
           Sign Up
         </Link>
       </div>
