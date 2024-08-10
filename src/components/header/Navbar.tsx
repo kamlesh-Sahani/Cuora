@@ -15,6 +15,7 @@ const Navbar = () => {
           <ul className="flex items-center gap-5 max-md:gap-2">
             <li className="flex items-center gap-2">Tutorials<FaCaretDown /></li>
             <li className="flex items-center gap-2">Certifications<FaCaretDown /></li>
+            <Link href="/problems"><li className="flex items-center gap-2">Problems</li></Link>
           </ul>
           <div className="rounded-3xl flex max-lg:hidden w-[40%] h-[60%] items-center border-2 p-2">
             <input type="text" placeholder="Search..." name="" className="rounded-3xl w-[90%] h-full outline-none px-2" />
