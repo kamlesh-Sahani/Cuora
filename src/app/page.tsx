@@ -9,7 +9,7 @@ export default function Home() {
       <section className="flex gap-4 mt-8">
         <Link
           href="#learn"
-          className="bg-[#FBBF24] text-gray-900 px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-colors duration-300"
+          className="bg-[#307ef3] text-[white] px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-yellow-400 transition-colors duration-300"
         >
           Start Learning Now
         </Link>

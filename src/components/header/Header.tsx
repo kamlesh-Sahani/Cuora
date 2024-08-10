@@ -7,7 +7,6 @@ const Header = () => {
     <header>
         <NavAd />
         <Navbar />
-        <NavSlider />
     </header>
   )
 }
