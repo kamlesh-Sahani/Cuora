@@ -20,15 +20,17 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ language, onSelect 
 
   return (
     <div className="ml-2 relative">
-      <p className="mb-2 text-lg font-semibold">Language:</p>
+     <div className="flex items-center gap-2">
+     <p className="mb-2 text-lg font-semibold">Language:</p>
       <button
         className="bg-gray-800 text-white px-4 py-2 rounded-md shadow-md hover:bg-gray-700"
         onClick={() => setIsOpen(!isOpen)}
       >
         {language}
       </button>
+     </div>
       {isOpen && (
-        <div className="absolute left-0 mt-2 w-full bg-gray-800 rounded-md shadow-lg z-10">
+        <div className="absolute left-0 mt-2 w-[30%] bg-gray-800 rounded-md shadow-lg z-10">
           {languages.map(([lang, version]) => (
             <button
               key={lang}
