@@ -25,3 +25,9 @@ box-sizing: border-box;
         
         }
 }
+@media (max-width: 768px) {
+  .navlinks div {
+    position: relative;
+    z-index: 1; /* Adjust z-index to prevent overlap */
+  }
+}
