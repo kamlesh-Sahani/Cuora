@@ -80,6 +80,11 @@ const Navbar = () => {
                 </ul>
               </div>
             </li>
+            <li>
+              <Link href="#">
+              Problems
+              </Link>
+            </li>
           </ul>
           <div className="rounded-3xl flex max-lg:hidden w-[40%] h-[60%] items-center border-2 p-2">
             <input type="text" placeholder="Search..." className="rounded-3xl w-[90%] h-full outline-none px-2" />
@@ -106,7 +111,7 @@ const Navbar = () => {
       {/* right */}
       <div className="w-[50%] flex justify-end items-center gap-10 max-sm:gap-5 h-full font-semibold text-white">
         <BsFillMoonStarsFill style={{ color: "#111827", width: 24, height: 24, cursor: 'pointer' }} />
-        <div className="flex gap-3 items-center justify-end w-[30%] max-lg:w-[50%] h-[70%] max-md:hidden">
+        <div className="flex gap-3 items-center justify-end w-[35%] max-lg:w-[50%] h-[70%] max-md:hidden">
           <Link href="#" className="rounded-3xl bg-[#146EF5] hover:bg-[#0d5fd8] px-2 text-[1rem] h-full max-lg:w-[55%] w-[55%] flex justify-center duration-200 items-center text-center max-md:text-[0.9rem]">
             Sign Up
           </Link>
@@ -158,6 +163,11 @@ const Navbar = () => {
                 <li className="p-2 hover:bg-gray-100"><Link href="#">UX/UI Design</Link></li>
               </ul>
             </div>
+          </li>
+          <li>
+            <Link href="#">
+              Problems
+            </Link>
           </li>
           <li className="w-full flex justify-center items-center mt-4">
             <div className="rounded-3xl w-[80%] h-[2.5rem] flex items-center border-2 p-2">
