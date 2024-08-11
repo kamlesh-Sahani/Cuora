@@ -24,28 +24,29 @@ const CodeEditor: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-full p-4">
-      <div className="mb-4">
-        <LanguageSelector language={language} onSelect={onSelect} />
+    <div className="w-full gap-4 max-md:flex-col flex p-4">
+      <div className="md:w-[70%] w-full">
+        <div className="mb-4">
+          <LanguageSelector language={language} onSelect={onSelect} />
+        </div>
+        <div className="flex-1 w-full mb-4">
+          <Editor
+            options={{
+              minimap: {
+                enabled: false,
+              },
+            }}
+            height="70vh"
+            theme="vs-dark"
+            language={language}
+            defaultValue={(CODE_SNIPPETS as CodeSnippets)[language]}
+            onMount={onMount}
+            value={value}
+            onChange={(value) => setValue(value || "")}
+          />
+        </div>
       </div>
-      <div className="flex-1 mb-4">
-        <Editor
-          options={{
-            minimap: {
-              enabled: false,
-            },
-          }}
-          height="30vh"
-          theme="vs-dark"
-          
-          language={language}
-          defaultValue={(CODE_SNIPPETS as CodeSnippets)[language]}
-          onMount={onMount}
-          value={value}
-          onChange={(value) => setValue(value || "")}
-        />
-      </div>
-      <div>
+      <div className="md:w-[30%] w-full">
         <Output editorRef={editorRef} language={language} />
       </div>
     </div>

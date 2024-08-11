@@ -81,7 +81,7 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/problems">
               Problems
               </Link>
             </li>

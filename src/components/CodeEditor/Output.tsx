@@ -29,10 +29,12 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full items-center">
     
+      <div className="flex gap-4">
+      <p className="text-lg font-semibold">Output:</p>
       <button
-        className={`bg-green-500 text-white sm:text-xl text-sm px-2 mb-4 sm:px-4 py-2 rounded-md shadow-md ${
+        className={`bg-green-500 text-white sm:text-xl text-sm px-2  sm:px-4 py-2 rounded-md shadow-md ${
           isLoading ? "opacity-50 cursor-not-allowed" : "hover:bg-green-600"
         }`}
         onClick={runCode}
@@ -40,9 +42,10 @@ const Output: React.FC<OutputProps> = ({ editorRef, language }) => {
       >
         {isLoading ? "Running..." : "Run Code"}
       </button>
-      <p className="text-lg font-semibold">Output</p>
+  
+      </div>
       <div
-        className={`mt-4 p-2 border h-[20vh] rounded-md ${
+        className={` mt-3 p-2 border md:h-[70vh] h-[30vh] rounded-md ${
           isError ? "border-red-500 text-red-400" : "border-gray-700"
         }`}
       >

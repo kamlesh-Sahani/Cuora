@@ -30,7 +30,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ language, onSelect 
       </button>
      </div>
       {isOpen && (
-        <div className="absolute left-0 mt-2 w-[30%] bg-gray-800 rounded-md shadow-lg z-10">
+        <div className="absolute left-0 mt-2 w-[50%] bg-gray-800 rounded-md shadow-lg z-10">
           {languages.map(([lang, version]) => (
             <button
               key={lang}

@@ -5,13 +5,14 @@ import CodeEditor from "../CodeEditor/CodeEditor";
 import { useEffect, useState } from "react";
 import { Eye, EyeOff, Moon, Sun } from "lucide-react";
 import { Problem, ProblemData } from "./ProblemData";
-import CommentSection from './CommentSection'
+import CommentSection from "./CommentSection";
+import Link from "next/link";
 const ProblemDetail: React.FC = () => {
   const { id } = useParams();
   const [problem, setProblem] = useState<Problem | undefined>();
   const [showHint, setShowHint] = useState<boolean>(false);
   const [showSolution, setShowSolution] = useState<boolean>(false);
-  const [showBlack, setShowBlack] = useState<boolean>(true);
+
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
 
   useEffect(() => {
@@ -53,34 +54,6 @@ const ProblemDetail: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-xl font-bold text-gray-700">Code Compiler</h3>
-          <button
-            onClick={() => setShowBlack(!showBlack)}
-            className="flex items-center gap-2 focus:outline-none"
-          >
-            {showBlack ? (
-              <>
-                <Sun className="w-6 h-6 text-yellow-500" />
-              </>
-            ) : (
-              <>
-                <Moon className="w-6 h-6 text-blue-900" />
-              </>
-            )}
-          </button>
-        </div>
-
-        {showBlack ? (
-          <div className="bg-black text-gray-500 md:p-4 rounded-lg">
-            <CodeEditor />
-          </div>
-        ) : (
-          <div className="bg-gray-50/50 text-gray-500 md:p-4 rounded-lg shadow-inner">
-            <CodeEditor />
-          </div>
-        )}
-
         <div className="flex flex-col p-4 shadow-inner mt-8 bg-gray-50/50 rounded-md mb-4">
           <div className="flex items-center justify-between">
             <h3 className="text-xl font-semibold text-green-500">Solution</h3>
@@ -117,8 +90,14 @@ const ProblemDetail: React.FC = () => {
             Mark as Completed
           </label>
         </div>
+        <div className="ml-2">
+          <Link href="/problems/compiler">
+          <button className="md:text-lg sm:text-md  md:p-3 p-2 rounded-md max text-white hover:bg-gray-500 bg-gray-700">
+            Get Compiler
+          </button></Link>
+        </div>
       </div>
-      <CommentSection/>
+      <CommentSection />
     </div>
   );
 };
