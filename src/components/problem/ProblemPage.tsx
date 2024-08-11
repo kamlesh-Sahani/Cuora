@@ -5,13 +5,14 @@ import CodeEditor from "../CodeEditor/CodeEditor";
 import { useEffect, useState } from "react";
 import { Eye, EyeOff, Moon, Sun } from "lucide-react";
 import { Problem, ProblemData } from "./ProblemData";
-
+import CommentSection from './CommentSection'
 const ProblemDetail: React.FC = () => {
   const { id } = useParams();
   const [problem, setProblem] = useState<Problem | undefined>();
   const [showHint, setShowHint] = useState<boolean>(false);
   const [showSolution, setShowSolution] = useState<boolean>(false);
   const [showBlack, setShowBlack] = useState<boolean>(true);
+  const [isCompleted, setIsCompleted] = useState<boolean>(false);
 
   useEffect(() => {
     if (typeof id === "string") {
@@ -25,7 +26,7 @@ const ProblemDetail: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen   bg-gray-100 flex flex-col items-center p-8">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
       <div className="w-full max-w-5xl bg-white shadow-lg rounded-lg p-6">
         <h1 className="lg:text-3xl text-2xl font-bold text-blue-600 mb-4">
           {problem.title}
@@ -52,8 +53,8 @@ const ProblemDetail: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between  mb-4">
-          <h3 className="text-xl font-bold text-gray-700 ">Code Compiler</h3>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-xl font-bold text-gray-700">Code Compiler</h3>
           <button
             onClick={() => setShowBlack(!showBlack)}
             className="flex items-center gap-2 focus:outline-none"
@@ -96,11 +97,28 @@ const ProblemDetail: React.FC = () => {
             </button>
           </div>
           <div>
-          {showSolution && <p className="text-gray-700">{problem.solution}</p>}
+            {showSolution && (
+              <p className="text-gray-700">{problem.solution}</p>
+            )}
           </div>
-   
+        </div>
+        <div className="flex items-center p-4  mt-4 ">
+          <input
+            type="checkbox"
+            id="completedCheckbox"
+            className="mr-3 w-5 h-5  text-green-600 rounded focus:ring-green-500 focus:ring-2"
+            checked={isCompleted}
+            onChange={() => setIsCompleted(!isCompleted)}
+          />
+          <label
+            htmlFor="completedCheckbox"
+            className="text-lg font-medium text-gray-700 cursor-pointer"
+          >
+            Mark as Completed
+          </label>
         </div>
       </div>
+      <CommentSection/>
     </div>
   );
 };

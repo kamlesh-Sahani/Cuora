@@ -45,8 +45,8 @@ const ProblemList: React.FC = () => {
     <div className="min-h-screen w-full bg-gray-100 flex flex-col items-center p-8">
       {/* <h1 className="text-4xl font-bold text-blue-500 mb-6">Problem List</h1> */}
        <Tanimation/>
-       <div className="flex flex-col xl:flex-row lg:justify-between w-full xl:w-[70%] mb-6">
-      <div className="relative w-full xl:w-[60%]">
+       <div className="flex flex-col 2xl:flex-row lg:justify-between w-full 2xl:w-[70%] mb-6">
+      <div className="relative w-full 2xl:w-[60%]">
         <input
           type="text"
           value={searchQuery}
@@ -56,7 +56,7 @@ const ProblemList: React.FC = () => {
         />
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
       </div>
-      <div className="flex flex-wrap max-xl:justify-center max-xl:items-center max-xl:mt-4 xl:ml-4 space-x-2">
+      <div className="flex flex-wrap max-2xl:justify-center max-2xl:items-center max-2xl:mt-4 2xl:ml-4 space-x-2">
         <button className="px-4 py-2 rounded bg-gray-200 text-gray-700">
           JavaScript
         </button>
@@ -72,7 +72,7 @@ const ProblemList: React.FC = () => {
       </div>
     </div>
 
-      <div className="w-full xl:w-[70%] bg-white shadow-lg rounded-lg p-6">
+      <div className="w-full 2xl:w-[70%] bg-white shadow-lg rounded-lg p-6">
         <div className="flex items-center mb-4"></div>
 
         <div className="flex font-bold gap-4 text-gray-600 border-b border-gray-200 pb-2 ml-2 mb-4">
@@ -186,7 +186,7 @@ const ProblemList: React.FC = () => {
                     <div className="flex-grow">
                       <div className="flex justify-between items-center mb-2">
                         <div className="text-lg flex gap-4 font-medium text-blue-500 hover:underline">
-                          {problem.title}
+                         <span className="text-black">{problem.id}.</span> {problem.title}
                           <div className="w-12 flex items-center justify-center">
                             {problem.completed ? (
                               <Check className="w-6 h-6 text-green-600" />
