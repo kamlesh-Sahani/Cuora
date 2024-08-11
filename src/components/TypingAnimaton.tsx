@@ -21,10 +21,20 @@ const TypingAnimation = () => {
           delaySpeed={1000}
         />
       </h1>
-     
+
       <p className="text-lg md:text-xl lg:text-2xl font-light text-center max-w-3xl mt-6 px-4">
-        Unlock your  <span className="text-blue-500 font-bold drop-shadow-lg">full potential </span> with hands-on tutorials, expert insights, and the    <span className="text-blue-500 font-bold drop-shadow-lg">latest tech trends. </span>
-        Whether you're starting out or leveling up, we've got the resources to  <span className="text-blue-500 font-bold drop-shadow-lg">guide your journey.</span>
+        Unlock your{" "}
+        <span className="text-blue-500 font-bold drop-shadow-lg">
+          full potential{" "}
+        </span>{" "}
+        with hands-on tutorials, expert insights, and the{" "}
+        <span className="text-blue-500 font-bold drop-shadow-lg">
+          latest tech trends.{" "}
+        </span>
+        Whether you're starting out or leveling up, we've got the resources to{" "}
+        <span className="text-blue-500 font-bold drop-shadow-lg">
+          guide your journey.
+        </span>
       </p>
     </div>
   );

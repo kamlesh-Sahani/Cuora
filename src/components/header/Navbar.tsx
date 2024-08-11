@@ -46,7 +46,9 @@ const Navbar = () => {
     <nav className="w-full h-[4rem] flex items-center px-6 max-lg:px-4 border-b">
       {/* left */}
       <div className="flex items-center h-full gap-9 max-lg:gap-7 w-[50%]">
-        <h1 className="text-2xl font-semibold">Cuora</h1>
+        <Link href="/" className="text-2xl font-semibold">
+          Cuora
+        </Link>
 
         <div className="navlinks h-full flex gap-9 max-md:gap-5 items-center max-md:hidden relative">
           <ul className="flex items-center gap-5 max-md:gap-2">
